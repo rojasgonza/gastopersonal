@@ -16,18 +16,23 @@ module.exports = function(){
     router.post('/nuevotentrada', tipoentradaController.nuevoTipoentrada);
     router.get('/tipoentradas', tipoentradaController.mostrarTEntradas);
     router.put('/tipoentradas/editar/:tEntradaid', tipoentradaController.editarTEntrada);
+    router.delete('/tipoentradas/borrar/:tEntradaid', tipoentradaController.borrarTEntrada);
+
 
     
     // entradas
     router.post('/nuevaentrada', entradaController.nuevaEntrada);
     router.get('/entradas', entradaController.mostrarEntradas);
-    router.put('/entrada/editar/:Entradaid', entradaController.editarEntrada);
+    router.put('/entradas/editar/:Entradaid', entradaController.editarEntrada);
+    router.delete('/entradas/borrar/:Entradaid', entradaController.borrarEntrada);
  
  
     // salidas
     router.post('/nuevasalida', salidaController.nuevaSalida);
     router.get('/salidas', salidaController.mostrarSalidas);
     router.put('/salidas/editar/:Salidaid', salidaController.editarSalida);
+    router.delete('/salidas/borrar/:Salidaid', salidaController.borrarSalida);
+
     
     return router;
 

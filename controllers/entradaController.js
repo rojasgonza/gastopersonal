@@ -31,3 +31,8 @@ exports.mostrarEntradas = async(req,res) =>
              condition);
          res.send({ 'mensaje': 'cambiado entrada' });
      }    
+     exports.borrarEntrada = async (req,res) => {
+        let condition = {where: {id: req.params.Entradaid}};
+        const entrada = await Entradas.destroy(condition);
+        res.send({'mensaje': 'eliminado'})
+    }

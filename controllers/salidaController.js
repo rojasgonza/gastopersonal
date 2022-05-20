@@ -32,3 +32,8 @@ exports.mostrarSalidas = async (req, res) => {
          condition);
      res.send({ 'mensaje': 'cambiado' });
  }
+ exports.borrarSalida = async (req,res) => {
+    let condition = {where: {id: req.params.Salidaid}};
+    const salida = await Salidas.destroy(condition);
+    res.send({'mensaje': 'eliminado'})
+}
