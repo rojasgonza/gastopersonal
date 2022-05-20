@@ -23,6 +23,7 @@
     "cors": "^2.8.5",
     "express-validator": "^6.14.0",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.19.2"
+    "sequelize": "^6.19.2",
+    "sequelize-cli": "^6.4.1"
   }
 }
