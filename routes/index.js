@@ -12,7 +12,7 @@ module.exports = function(){
     router.get('/entradas', entradaController.mostrarEntradas);
     router.post('/nuevasalida', salidaController.nuevaSalida);
     router.get('/salidas', salidaController.mostrarSalidas);
-    router.post('/salidas/editar/:id', salidaController.editarSalida);
+    router.put('/salidas/editar/:Salidaid', salidaController.editarSalida);
     
     return router;
 
