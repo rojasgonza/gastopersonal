@@ -7,6 +7,9 @@ const db = require('./config/db');
 const helpers = require('./helpers');
 //importacion de modelos
 require('./models/tipogasto');
+require('./models/tipoentrada');
+require('./models/entrada');
+
 const cors = require('cors')
 
 
