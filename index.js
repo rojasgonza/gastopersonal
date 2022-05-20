@@ -9,6 +9,7 @@ const helpers = require('./helpers');
 require('./models/tipogasto');
 require('./models/tipoentrada');
 require('./models/entrada');
+require('./models/salida');
 
 const cors = require('cors')
 

@@ -22,3 +22,12 @@ exports.mostrarEntradas = async(req,res) =>
     res.json(entrada);
   
     }
+    exports.editarEntrada = async (req, res) => {
+        let condition =  {where: {id: req.params.Entradaid}}; 
+         const entrada = await Entradas.update(
+             { detalle: req.body.detalle ,
+             monto: req.body.monto,
+             tipoentradaId: req.body.tipoentradaId},
+             condition);
+         res.send({ 'mensaje': 'cambiado entrada' });
+     }    
