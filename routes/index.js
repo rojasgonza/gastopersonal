@@ -9,6 +9,7 @@ module.exports = function(){
     router.post('/nuevotgasto', tipogastoController.nuevoTipogasto);
     router.get('/tipogasto', tipogastoController.mostrarTgasto);
     router.put('/tipogasto/editar/:tGastoid', tipogastoController.editarTGasto);
+    router.delete('/tipogasto/borrar/:tGastoid', tipogastoController.borrarTgasto);
 
 
     // tipo entradas

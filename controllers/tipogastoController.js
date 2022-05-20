@@ -25,3 +25,9 @@ exports.nuevoTipogasto = async (req, res) => {
              condition);
          res.send({ 'mensaje': 'cambiado' });
      }
+
+     exports.borrarTgasto = async (req,res) => {
+         let condition = {where: {id: req.params.tGastoid}};
+         const tipogasto = await tipoGastos.destroy(condition);
+         res.send({'mensaje': 'eliminado'})
+     }
