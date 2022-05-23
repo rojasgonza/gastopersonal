@@ -21,7 +21,7 @@ module.exports = function(){
 
     
     // entradas
-    router.post('/entradas', entradaController.nuevaEntrada);
+    router.post('/nentradas', entradaController.nuevaEntrada);
     router.get('/entradas', entradaController.mostrarEntradas);
     router.get('/entradas/:Entradaid', entradaController.mostrarEntrada);
 
@@ -39,4 +39,3 @@ module.exports = function(){
     return router;
 
 }
-// mostrarTEntradas tEntradaid

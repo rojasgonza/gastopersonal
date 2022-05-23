@@ -25,6 +25,7 @@ exports.mostrarTEntradas = async (req, res) => {
              condition);
          res.send({ 'mensaje': 'cambiado' });
      }
+     
      exports.borrarTEntrada = async (req,res) => {
         let condition = {where: {id: req.params.tEntradaid}};
         const tipoentrada = await tipoEntradas.destroy(condition);
