@@ -21,7 +21,7 @@ module.exports = function(){
 
     
     // entradas
-    router.post('/nuevaentrada', entradaController.nuevaEntrada);
+    router.post('/entradas', entradaController.nuevaEntrada);
     router.get('/entradas', entradaController.mostrarEntradas);
     router.put('/entradas/editar/:Entradaid', entradaController.editarEntrada);
     router.delete('/entradas/borrar/:Entradaid', entradaController.borrarEntrada);

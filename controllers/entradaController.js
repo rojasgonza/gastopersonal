@@ -4,7 +4,7 @@ exports.nuevaEntrada = async (req, res) => {
   
         const { detalle, monto, tipoentradaId } = req.body;
         const entrada = await Entradas.create({ detalle, monto,tipoentradaId });
-        res.send({'mensaje': 'enviado'  });
+        res.json({'mensaje': 'enviado'  });
     }
 
 exports.mostrarEntradas = async(req,res) =>
