@@ -23,6 +23,21 @@ exports.mostrarSalidas = async (req, res) => {
     res.json(salida);
 
 }
+exports.mostrarSalida = async(req,res) =>
+{  let condition =  {where: {id: req.params.Salidaid}}; 
+    const salida = await Salidas.findOne({    include: [
+        {
+            association: Salidas.tipoGastos
+        }
+    ]},condition);
+
+    if (!salida) {
+        console.log(error);
+        next();
+    }
+    res.json(salida);
+  
+    }
  exports.editarSalida = async (req, res) => {
     let condition =  {where: {id: req.params.Salidaid}}; 
      const salida = await Salidas.update(

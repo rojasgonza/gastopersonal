@@ -17,6 +17,17 @@ exports.mostrarTEntradas = async (req, res) => {
         res.json(tipoentrada);
     
     }
+    exports.mostrarTEntrada = async(req,res) =>
+{  let condition =  {where: {id: req.params.TEntradaid}}; 
+    const tipoentrada = await tipoEntradas.findOne(condition);
+
+    if (!tipoentrada) {
+        console.log(error);
+        next();
+    }
+    res.json(tipoentrada);
+  
+    }
 
     exports.editarTEntrada = async (req, res) => {
         let condition =  {where: {id: req.params.tEntradaid}}; 

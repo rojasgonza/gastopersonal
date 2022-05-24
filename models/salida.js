@@ -16,6 +16,9 @@ const Salidas = db.define('salida',{
     }
 
 });
-Salidas.tipoGastos = Salidas.belongsTo(tipoGastos);
+Salidas.tipoGastos = Salidas.belongsTo(tipoGastos,{
+    onDelete: 'cascade',
+    onUpdate: 'cascade'
+  });
 
 module.exports = Salidas;

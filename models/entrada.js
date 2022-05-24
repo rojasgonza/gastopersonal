@@ -13,9 +13,13 @@ const Entradas = db.define('entrada',{
     },
     monto:{
         type: Sequelize.DECIMAL(10,2)
-    }
+    },
 
+    
 });
-Entradas.tipoEntradas = Entradas.belongsTo(tipoEntradas);
+Entradas.tipoEntradas = Entradas.belongsTo(tipoEntradas,{
+    onDelete: 'cascade',
+    onUpdate: 'cascade'
+  });
 
 module.exports = Entradas;
